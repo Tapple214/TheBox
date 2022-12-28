@@ -1,0 +1,340 @@
+@font-face {
+    font-family: cotta;
+    src: url("/fonts/cotta-free.otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background-color: #FCC384;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }
+
+.nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5px;
+    position: fixed;
+    z-index: 10;
+    background-color: #FCC384;
+  }
+
+  .nav > li {
+    margin: auto 0;
+    padding-top: 10px;
+    color: #7d1010;
+  }
+  
+  .nav > li::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.5s;
+  }
+  
+  .nav > li:hover::after {
+    width: 100%;
+    background-color: #7d1010;
+  }
+
+.rightNav {
+    display: flex;
+    align-items: center;
+}
+
+.rightNav > * {
+    color:white;
+    padding-top: 5px;
+    margin:0px 20px;
+}
+
+.carousel {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../assets/bg41.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    padding: 80px;
+}
+
+.carousel>h2 {
+    font-size: 4rem;
+    color: #95130A;
+    margin-bottom: none;
+}
+
+.controller {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 400px;
+    margin: 10px;
+    transform: translateY(40px);
+}
+
+.controller > button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+i {
+    color: #95130A;
+    z-index: 200;
+    cursor: pointer;
+}
+
+.glide {
+    width: 80%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 5px;
+    transform:translateY(-30px);
+}
+
+
+.card {
+    width: 100%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+    z-index: 10;
+}
+
+.card>img {
+    height: 300px;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.card>h3 {
+    font-size: 2rem;
+    color: #95130A;
+    text-align: center;
+}
+
+.card>div {
+    text-align: center;
+    color: #95130A;
+    /* background-color: black; */
+    width: 70%;
+    margin: 20px;
+
+}
+
+
+#left-btn {
+    -webkit-animation: leftbtn 1s alternate infinite;
+    animation: leftbtn 1s alternate infinite;
+}
+
+#right-btn {
+    left: 87%;
+    -webkit-animation: rightbtn 1s alternate infinite;
+    animation: rightbtn 1s alternate infinite;
+}
+
+.shopping-list {
+    width: 100%;
+    max-height: 100vh;
+    background:url('../assets/bg3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    /* transform: translateY(-25px); */
+    display: flex;
+    flex-direction: column;
+    /* place-content: center; */
+    place-items: center;
+    padding-bottom: 5%;
+}
+
+.shopping-list > h1 {
+    color:#95130A;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+}
+
+.container {
+    width:80%;
+    padding:20px 0px;
+}
+
+.container > .item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin: 20px;
+}
+
+.item > h3, p {
+    color:#95130A;
+}
+
+.submit {
+    margin: 20px 0px;
+    color: white;
+    background-color: #95130A;
+    border: 1px solid #95130A;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:background-color 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+.submit:hover {
+    background-color: #d04949;
+}
+
+@media screen and (max-width:800px) {
+    .controller {
+        width:250px;
+    }
+
+    .card > img {
+        height:150px;
+    }
+
+    #logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@-webkit-keyframes leftbtn {
+    from {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    to {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}
+
+@keyframes leftbtn {
+    from {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+
+    to {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+}
+
+@-webkit-keyframes rightbtn {
+    from {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    to {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes rightbtn {
+    from {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+
+    to {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  
+    .nav > li:nth-child(2), li:nth-child(3),li:nth-child(4),
+    li:nth-child(5) {
+      display: none;
+    }
+  }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #95130A;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3d0000;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #FCC384;
+  }
